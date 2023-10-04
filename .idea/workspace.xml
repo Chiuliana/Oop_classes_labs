@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0d3e06e3-0dc5-4fa3-8c87-563b7b259221" name="Changes" comment="" />
+=======
+    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="" />
+>>>>>>> 52d73f2 (add readme file)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="2WFb72euPZx4Bg8erfogq59xinr" />
+=======
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2WJ4QBUqVUFGa0m19TYabujMBm5" />
+>>>>>>> 52d73f2 (add readme file)
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -17,18 +28,30 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "master",
     "onboarding.tips.debug.path": "/Users/iuliana/Documents/GitHub/Oop_classes_lab/src/Main.java"
+=======
+    "onboarding.tips.debug.path": "/Users/iuliana/Documents/GitHub/labs_classes_oop_1/src/Main.java"
+>>>>>>> 52d73f2 (add readme file)
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="0d3e06e3-0dc5-4fa3-8c87-563b7b259221" name="Changes" comment="" />
       <created>1696331106976</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696331106976</updated>
+=======
+      <changelist id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="" />
+      <created>1696437333423</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696437333423</updated>
+>>>>>>> 52d73f2 (add readme file)
     </task>
     <servers />
   </component>
