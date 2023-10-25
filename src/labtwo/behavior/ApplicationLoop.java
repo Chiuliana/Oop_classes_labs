@@ -440,7 +440,7 @@ public class ApplicationLoop {
         return inputDate("Enter date of birth (dd/MM/yyyy):");
     }
     // 2. Graduate a student from a faculty
-    private void graduateStudentFromFaculty() {
+    public void graduateStudentFromFaculty() {
         System.out.println("Enter faculty abbreviation:");
         String facultyAbbreviation = scanner.nextLine();
 
@@ -458,6 +458,9 @@ public class ApplicationLoop {
                 // Remove the student from the faculty
                 faculty.removeStudent(student);
 
+                // Add the student to the list of graduates
+                faculty.addGraduate(student);
+
                 System.out.println("Student graduated successfully.");
             } else {
                 System.out.println("Student not found.");
@@ -466,6 +469,7 @@ public class ApplicationLoop {
             System.out.println("Faculty not found.");
         }
     }
+
     private Student findStudentByEmail(String email) {
         for (Faculty faculty : university.getFaculties()) {
             for (Student student : faculty.getStudents()) {
