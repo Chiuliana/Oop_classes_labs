@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/labtwo/behavior/ApplicationLoop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labtwo/models/Faculty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labtwo/models/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labtwo/models/StudyField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/labtwo/models/University.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.d" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +23,26 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Chiuliana"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="d598b5b9-0c81-401f-9059-bc6c5406b2ea" />
+        <option name="url" value="https://github.com/Chiuliana/Oop_classes_labs.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2WJ4QBUqVUFGa0m19TYabujMBm5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -40,7 +53,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lab-two-init",
+    "git-widget-placeholder": "Rebasing lab-two-init",
     "onboarding.tips.debug.path": "/Users/iuliana/Documents/GitHub/labs_classes_oop_1/src/Main.java"
   }
 }]]></component>
@@ -54,5 +67,20 @@
       <updated>1696437333423</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit files" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit files" />
   </component>
 </project>
