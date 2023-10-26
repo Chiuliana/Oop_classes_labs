@@ -1,5 +1,4 @@
 package lab_two.documents;
-// TextDocument.java
 
 import java.io.BufferedReader;
 import java.io.FileReader;

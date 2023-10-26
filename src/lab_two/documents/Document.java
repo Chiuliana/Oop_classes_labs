@@ -1,8 +1,6 @@
 package lab_two.documents;
-// Document.java
 
 import java.util.Date;
-
 public class Document {
     protected String filename;
     protected String extension;
