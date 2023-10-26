@@ -1,9 +1,9 @@
-package labtwo.behavior;
+package lab_one.behavior;
 
-import labtwo.models.Faculty;
-import labtwo.models.Student;
-import labtwo.models.StudyField;
-import labtwo.models.University;
+import lab_one.models.Faculty;
+import lab_one.models.Student;
+import lab_one.models.StudyField;
+import lab_one.models.University;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

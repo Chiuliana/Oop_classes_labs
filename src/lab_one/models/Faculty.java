@@ -1,6 +1,4 @@
-package labtwo.models;
-
-import labtwo.models.StudyField;
+package lab_one.models;
 
 import java.util.ArrayList;
 import java.util.List;

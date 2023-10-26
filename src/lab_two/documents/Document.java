@@ -1,3 +1,4 @@
+package lab_two.documents;
 public abstract class Document {
     protected String filename;
     protected String extension;

@@ -1,6 +1,6 @@
-import labtwo.behavior.ApplicationLoop;
+import lab_one.behavior.ApplicationLoop;
 
-public class Main {
+public class Main1 {
     public static void main(String[] args) {
         ApplicationLoop app = new ApplicationLoop();
         app.run();
