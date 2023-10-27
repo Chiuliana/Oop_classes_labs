@@ -1,38 +1,24 @@
 package lab_two.documents;
 
-public class PythonDocument extends ProgramDocument {
+public class PythonDocument extends Document {
     private int lineCount;
-    private int classCount;
-    private int methodCount;
+    private int functionCount;
 
-    public PythonDocument(String filename, int lineCount, int classCount, int methodCount) {
-        super(filename);
+    // Constructor
+    public PythonDocument(String filename, String extension, int lineCount, int functionCount) {
+        super(filename, extension);
         this.lineCount = lineCount;
-        this.classCount = classCount;
-        this.methodCount = methodCount;
+        this.functionCount = functionCount;
     }
 
-    @Override
+    // Getters for lineCount and functionCount
     public int getLineCount() {
         return lineCount;
     }
 
-    @Override
-    public int getClassCount() {
-        return classCount;
+    public int getFunctionCount() {
+        return functionCount;
     }
 
-    @Override
-    public int getMethodCount() {
-        return methodCount;
-    }
-
-    @Override
-    public void displayInfo() {
-        System.out.println("File: " + getFilename() + "." + getExtension());
-        System.out.println("Line count: " + lineCount);
-        System.out.println("Class count: " + classCount);
-        System.out.println("Method count: " + methodCount);
-    }
 }
 
