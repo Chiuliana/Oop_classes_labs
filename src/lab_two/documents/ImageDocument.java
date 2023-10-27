@@ -1,16 +1,22 @@
 package lab_two.documents;
 
 public class ImageDocument extends Document {
-    private String imageSize;
+    private int width;
+    private int height;
 
-    public ImageDocument(String filename) {
-        super(filename, "png");
-        // Initialize imageSize here
+    // Constructor
+    public ImageDocument(String filename, String extension, int width, int height) {
+        super(filename, extension);
+        this.width = width;
+        this.height = height;
     }
 
-    @Override
-    public void getInfo() {
-        // Implement logic to get image file information
+    // Getters for width and height
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }
-

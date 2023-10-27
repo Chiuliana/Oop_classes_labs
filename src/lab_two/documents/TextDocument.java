@@ -1,36 +1,27 @@
 package lab_two.documents;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class TextDocument extends Document {
     private int lineCount;
     private int wordCount;
     private int charCount;
 
-    public TextDocument(String filename) {
-        super(filename, "txt");
-        // Initialize lineCount, wordCount, charCount here
+    // Constructor
+    public TextDocument(String filename, String extension, int lineCount, int wordCount, int charCount) {
+        super(filename, extension);
+        this.lineCount = lineCount;
+        this.wordCount = wordCount;
+        this.charCount = charCount;
     }
 
-    @Override
-    public void getInfo() {
-        // Implement logic to get text file information
+    // Getters for lineCount, wordCount, and charCount
+    public int getLineCount() {
+        return lineCount;
     }
 
-    private void calculateTextStats() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                lineCount++;
-                wordCount += line.split("\\s+").length;
-                charCount += line.length();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public int getWordCount() {
+        return wordCount;
+    }
+
+    public int getCharCount() {
+        return charCount;
     }
 }
-
-

@@ -5,30 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files">
-      <change afterPath="$PROJECT_DIR$/src/lab_two/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/documents/ImageDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/documents/JavaDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/documents/ProgramDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/documents/PythonDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/documents/TextDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/monitor/FileMonitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_two/monitor/Snapshot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/documents/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/documents/ImageDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/documents/JavaDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/documents/ProgramDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/documents/PythonDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/documents/TextDocument.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/monitor/FileMonitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labthree/monitor/Snapshot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labtwo/behavior/ApplicationLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_one/behavior/ApplicationLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labtwo/models/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_one/models/Faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labtwo/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_one/models/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labtwo/models/StudyField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_one/models/StudyField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/labtwo/models/University.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_one/models/University.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/monitor/FolderMonitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/monitor/FolderMonitor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,14 +48,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Rebasing lab-two-init&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/iuliana/Documents/GitHub/labs_classes_oop_1/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Rebasing lab-two-init",
+    "last_opened_file_path": "/Users/iuliana/Documents/GitHub/labs_classes_oop_1",
+    "onboarding.tips.debug.path": "/Users/iuliana/Documents/GitHub/labs_classes_oop_1/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

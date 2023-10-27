@@ -1,6 +1,10 @@
 package lab_two.monitor;
+
+import lab_two.documents.Document;
+
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class FolderMonitor {
