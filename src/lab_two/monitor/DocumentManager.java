@@ -1,9 +1,11 @@
 package lab_two.monitor;
 
-import lab_two.documents.Document;
-import lab_two.documents.ImageDocument;
-import lab_two.documents.TextDocument;
+import lab_two.documents.*;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -45,7 +47,19 @@ public class DocumentManager {
                     ImageDocument imageDoc = (ImageDocument) doc;
                     System.out.println("Width: " + imageDoc.getWidth());
                     System.out.println("Height: " + imageDoc.getHeight());
-                } // Add similar blocks for other document types
+                } else if (doc instanceof JavaDocument) {
+                    JavaDocument javaDoc = (JavaDocument) doc;
+                    System.out.println("Line Count: " + javaDoc.getLineCount());
+                    System.out.println("Class Count: " + javaDoc.getClassCount());
+                    System.out.println("Method Count: " + javaDoc.getMethodCount());
+                } else if (doc instanceof PythonDocument) {
+                    PythonDocument pythonDoc = (PythonDocument) doc;
+                    System.out.println("Line Count: " + pythonDoc.getLineCount());
+                    System.out.println("Function Count: " + pythonDoc.getFunctionCount());
+                } else if (doc instanceof ProgramDocument) {
+                    ProgramDocument programDoc = (ProgramDocument) doc;
+                    programDoc.getProgramInfo();
+                }
 
                 return;
             }
@@ -77,9 +91,15 @@ public class DocumentManager {
     // Helper method to get current time
     private String getCurrentTime() {
         LocalDateTime currentTime = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd' T 'HH:mm:ss.SSSSSSSSS");
 
         return currentTime.format(formatter);
+    }
+    // Method to list all documents
+    public void listAllDocuments() {
+        for (Document doc : documents) {
+            System.out.println(doc.getFilename() + " - " + doc.getExtension());
+        }
     }
 }
 

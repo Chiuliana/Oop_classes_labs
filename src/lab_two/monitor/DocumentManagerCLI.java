@@ -28,10 +28,12 @@ public class DocumentManagerCLI {
                 }
             } else if (command.equals("status")) {
                 documentManager.printStatus();
+            } else if (command.equals("list")) {
+                documentManager.listAllDocuments();
             } else if (command.equals("exit")) {
                 break;
             } else {
-                System.out.println("Invalid command. Available commands: commit, info <filename>, status, exit");
+                System.out.println("Invalid command. Available commands: commit, info <filename>, status, list, exit");
             }
         }
     }
