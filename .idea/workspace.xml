@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files">
-      <change beforePath="$PROJECT_DIR$/src/lab_two/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/Main2.java" afterDir="false" />
-    </list>
+    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

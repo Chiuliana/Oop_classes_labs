@@ -4,6 +4,8 @@ import lab_two.documents.Document;
 import lab_two.documents.ImageDocument;
 import lab_two.documents.TextDocument;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,11 +74,12 @@ public class DocumentManager {
         }
         System.out.println("Snapshot updated.");
     }
-
-    // Helper method to get current time (You'll need to implement this)
+    // Helper method to get current time
     private String getCurrentTime() {
-        // Implement this to return the current time in the desired format
-        return "";
+        LocalDateTime currentTime = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS");
+
+        return currentTime.format(formatter);
     }
 }
 
