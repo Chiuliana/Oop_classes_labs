@@ -13,12 +13,16 @@ public class ProgramDocument extends Document {
 
     public ProgramDocument(String filename) {
         super(filename, "py");
-        // Initialize lineCount, classCount, methodCount here
+        calculateProgramStats();
     }
 
-    @Override
-    public void getInfo() {
-        // Implement logic to get program file information
+    public void getProgramInfo() {
+        System.out.println("Filename: " + getFilename());
+        System.out.println("Extension: " + getExtension());
+        System.out.println("Changed: " + (isChanged() ? "Yes" : "No"));
+        System.out.println("Line Count: " + lineCount);
+        System.out.println("Class Count: " + classCount);
+        System.out.println("Method Count: " + methodCount);
     }
 
     private void calculateProgramStats() {
@@ -44,4 +48,5 @@ public class ProgramDocument extends Document {
         return count;
     }
 }
+
 
