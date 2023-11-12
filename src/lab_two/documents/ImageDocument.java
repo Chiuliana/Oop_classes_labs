@@ -19,4 +19,13 @@ public class ImageDocument extends Document {
     public int getHeight() {
         return height;
     }
+
+    // Additional method that modifies the document, e.g., updating width and height
+    public void modifyDocument(int newWidth, int newHeight) {
+        this.width = newWidth;
+        this.height = newHeight;
+
+        // Mark the document as changed after making modifications
+        markChanged("Updated width and height");
+    }
 }

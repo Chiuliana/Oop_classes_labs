@@ -26,12 +26,26 @@ public class ProgramDocument extends Document {
     }
 
     private void calculateProgramStats() {
+        int oldLineCount = this.lineCount;
+        int oldClassCount = this.classCount;
+        int oldMethodCount = this.methodCount;
+
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 lineCount++;
                 classCount += countOccurrences(line, "\\bclass\\b");
                 methodCount += countOccurrences(line, "\\bdef\\s+(\\w+)\\s*\\(.*\\)\\s*:");
+            }
+
+            // Check if there are changes
+            if (oldLineCount != this.lineCount || oldClassCount != this.classCount || oldMethodCount != this.methodCount) {
+                // Provide details about the changes
+                String changeDetails = String.format("Added/Modified lines: %d, Added classes: %d, Added/Modified methods: %d",
+                        this.lineCount - oldLineCount, this.classCount - oldClassCount, this.methodCount - oldMethodCount);
+
+                // Mark the document as changed after updating counts
+                markChanged(changeDetails);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,6 +61,8 @@ public class ProgramDocument extends Document {
         }
         return count;
     }
+
+
 }
 
 

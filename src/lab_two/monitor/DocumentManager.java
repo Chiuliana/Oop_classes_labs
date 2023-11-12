@@ -2,6 +2,8 @@ package lab_two.monitor;
 
 import lab_two.documents.*;
 
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -92,8 +94,23 @@ public class DocumentManager {
     }
 
     private ImageDocument createImageDocument(File file) {
-        // Provide default values for image width and height
-        return new ImageDocument(file.getName(), "png", 0, 0);
+        try {
+            BufferedImage image = ImageIO.read(file);
+
+            if (image != null) {
+                int width = image.getWidth();
+                int height = image.getHeight();
+
+                return new ImageDocument(file.getName(), "png", width, height);
+            } else {
+                // ImageIO.read returns null if the input file does not contain a recognized image format.
+                System.out.println("Unable to read image: " + file.getName());
+                return new ImageDocument(file.getName(), "png", 0, 0); // Default values
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return new ImageDocument(file.getName(), "png", 0, 0); // Default values
+        }
     }
 
     private JavaDocument createJavaDocument(File file) {
@@ -176,6 +193,7 @@ public class DocumentManager {
 
     public void addDocument(Document document) {
         documents.add(document);
+        document.markChanged(); // Mark the document as changed when adding it
     }
 
     public void removeDocument(String filename) {

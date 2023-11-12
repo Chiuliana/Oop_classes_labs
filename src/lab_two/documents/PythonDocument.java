@@ -20,5 +20,14 @@ public class PythonDocument extends Document {
         return functionCount;
     }
 
+    // Additional method that modifies the document, e.g., updating line and function counts
+    public void modifyDocument(int newLineCount, int newFunctionCount) {
+        this.lineCount = newLineCount;
+        this.functionCount = newFunctionCount;
+
+        // Mark the document as changed after making modifications
+        markChanged("Updated line count and function count");
+    }
+
 }
 

@@ -6,10 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_two/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/documents/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/Document.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/documents/ImageDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/ImageDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/documents/JavaDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/JavaDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/documents/ProgramDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/ProgramDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/documents/PythonDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/PythonDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/documents/TextDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/documents/TextDocument.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lab_two/monitor/DocumentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/monitor/DocumentManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_two/my_local_folder/MyJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/my_local_folder/MyJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_two/my_local_folder/MyPython_copy.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/my_local_folder/MyProgram_copy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/my_local_folder/MyPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/my_local_folder/MyPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/my_local_folder/image.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/my_local_folder/image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_two/my_local_folder/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_two/my_local_folder/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +120,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="final program" />
     <MESSAGE value="commit files" />
     <option name="LAST_COMMIT_MESSAGE" value="commit files" />
   </component>

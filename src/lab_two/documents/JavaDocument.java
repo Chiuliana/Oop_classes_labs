@@ -26,4 +26,14 @@ public class JavaDocument extends Document {
         return methodCount;
     }
 
+    // Additional method that modifies the document, e.g., updating counts
+    public void modifyDocument(int newLineCount, int newClassCount, int newMethodCount) {
+        this.lineCount = newLineCount;
+        this.classCount = newClassCount;
+        this.methodCount = newMethodCount;
+
+        // Mark the document as changed after making modifications
+        markChanged("Updated line count, class count, and method count");
+    }
+
 }

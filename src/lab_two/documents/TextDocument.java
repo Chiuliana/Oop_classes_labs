@@ -24,4 +24,14 @@ public class TextDocument extends Document {
     public int getCharCount() {
         return charCount;
     }
+
+    // Additional method that modifies the document, e.g., updating line, word, and char counts
+    public void modifyDocument(int newLineCount, int newWordCount, int newCharCount) {
+        this.lineCount = newLineCount;
+        this.wordCount = newWordCount;
+        this.charCount = newCharCount;
+
+        // Mark the document as changed after making modifications
+        markChanged("Updated line count, word count, and character count");
+    }
 }
