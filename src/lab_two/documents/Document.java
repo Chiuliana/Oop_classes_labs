@@ -50,11 +50,6 @@ public class Document {
         this.changeDetails = null;
     }
 
-    // Method to get details of changes
-//    public String getChangeDetails() {
-//        return changeDetails;
-//    }
-
     // Method to update the last checked time
     public void updateLastCheckedTime() {
         this.lastCheckedTime = System.currentTimeMillis();
