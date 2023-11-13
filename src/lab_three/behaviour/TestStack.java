@@ -15,18 +15,19 @@ public class TestStack<T> {
 
     public void run() {
         String message = "";
-        System.out.println("Stack Test. Enter 'h' for help.");
-        System.out.println("===========================================");
+        System.out.println("Stack Test.");
+        System.out.println("...............\n" + "For help enter 'h'" + "...............\n");
         while (!message.equals("q")) {
             System.out.print("> ");
             String[] input = scanner.nextLine().split(" ");
             message = input[0];
             switch (message) {
                 case "h" -> System.out.println("""
-                        push <value> - push value to stack
-                        pop          - pop value from stack
-                        peek         - peek value from stack
-                        q            - quit
+                        push val to stack --> push <value> 
+                        pop val from stack --> pop
+                        peek val from stack --> peek
+                        .....................................
+                        quit --> q
                         """);
                 case "push" -> {
                     if (input.length < 2) {
@@ -47,11 +48,11 @@ public class TestStack<T> {
                     System.out.println(value);
                     this.stack.print();
                 }
-                case "q" -> System.out.println("Exiting...");
+                case "q" -> System.out.println("Quit");
                 default -> System.out.println("Invalid command.");
             }
         }
-        System.out.println("===========================================\n");
+        System.out.println(".....................................\n");
     }
 
     private T parseValue(String input) {

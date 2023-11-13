@@ -18,9 +18,11 @@ public class Main3 {
         while (!message.equals("q")) {
             System.out.println("""
                     Choose an option:
-                    1. Test Stack
-                    2. Test Queue
-                    q. Quit
+                    ..................
+                    Test Stack  --> 1
+                    Test Queue --> 2
+                    ..................
+                    Quit --> q
                     """);
             System.out.print("> ");
             message = scanner.nextLine();
@@ -29,9 +31,11 @@ public class Main3 {
                 case "1" -> {
                     System.out.println("""
                             Choose a stack implementation:
-                            1. ArrayUpStack
-                            2. LinkedListStack
-                            q. Quit
+                            ...............................
+                            ArrayUpStack --> 2
+                            LinkedListStack --> 2
+                            ...............................
+                            Quit --> q
                             """);
                     System.out.print("> ");
                     String stackOption = scanner.nextLine();
@@ -49,9 +53,11 @@ public class Main3 {
                 case "2" -> {
                     System.out.println("""
                             Choose a queue implementation:
-                            1. ArrayUpQueue
-                            2. LinkedListQueue
-                            q. Quit
+                            ...............................
+                            ArrayUpQueue --> 1
+                            LinkedListQueue --> 2
+                            ...............................
+                            Quit --> q
                             """);
                     System.out.print("> ");
                     String queueOption = scanner.nextLine();
@@ -66,7 +72,7 @@ public class Main3 {
                         System.out.println("Invalid queue option.");
                     }
                 }
-                case "q" -> System.out.println("Shutting down...");
+                case "q" -> System.out.println("Quit");
                 default -> System.out.println("Invalid command.");
             }
         }

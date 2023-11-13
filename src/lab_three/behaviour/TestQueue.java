@@ -15,18 +15,19 @@ public class TestQueue<T> {
 
     public void run() {
         String message = "";
-        System.out.println("Queue Test. Enter 'h' for help.");
-        System.out.println("===========================================");
+        System.out.println("Queue Test.");
+        System.out.println("...............\n" + "For help enter 'h'" + "...............\n");
         while (!message.equals("q")) {
             System.out.print("> ");
             String[] input = scanner.nextLine().split(" ");
             message = input[0];
             switch (message) {
                 case "h" -> System.out.println("""
-                        enqueue <value> - enqueue value to queue
-                        dequeue         - dequeue value from queue
-                        peek            - peek value from queue
-                        q               - quit
+                        enqueue val to queue --> enqueue <value> 
+                        dequeue val from queue --> dequeue 
+                        peek val from queue --> peek
+                        ..........................................
+                        quit --> q
                         """);
                 case "enqueue" -> {
                     if (input.length < 2) {
@@ -47,11 +48,11 @@ public class TestQueue<T> {
                     System.out.println(value);
                     this.queue.print();
                 }
-                case "q" -> System.out.println("Shutting down...");
+                case "q" -> System.out.println("Quit");
                 default -> System.out.println("Invalid command.");
             }
         }
-        System.out.println("===========================================");
+        System.out.println(".....................................");
     }
 
     private T parseValue(String input) {

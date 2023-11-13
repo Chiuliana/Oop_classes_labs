@@ -9,5 +9,3 @@ public class Node<T> {
         this.next = null;
     }
 }
-
-

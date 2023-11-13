@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files">
-      <change afterPath="$PROJECT_DIR$/src/lab_three/Main3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_three/models/Queue/ArrayQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_three/models/Queue/CustomQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_three/models/Queue/LinkedQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_three/models/Stack/CustomStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lab_three/models/Stack/LinkedStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lab_three/models/Stack/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_three/models/Stack/Node.java" afterDir="false" />
-    </list>
+    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

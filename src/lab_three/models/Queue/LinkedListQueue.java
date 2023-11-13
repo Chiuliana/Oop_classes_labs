@@ -26,8 +26,7 @@ public class LinkedListQueue<T> implements Queue<T> {
     @Override
     public void enqueue(T value) {
         if (!isFull()) {
-            Node<T> newNode = new Node<>();
-            newNode.setData(value);
+            Node<T> newNode = new Node<>(value);  // Use the constructor with data parameter
             if (isEmpty()) {
                 head = newNode;
             } else {
@@ -35,7 +34,7 @@ public class LinkedListQueue<T> implements Queue<T> {
                 while (current.next != null) {
                     current = current.next;
                 }
-                current.setNext(newNode);
+                current.next = newNode;
             }
             size++;
         } else {
