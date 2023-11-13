@@ -203,30 +203,33 @@ public class DocumentManager {
     public void printFileInfo(String filename) {
         for (Document doc : documents) {
             if (doc.getFilename().equals(filename)) {
-                System.out.println("Filename: " + doc.getFilename());
-                System.out.println("Extension: " + doc.getExtension());
-                System.out.println("Changed: " + (doc.isChanged() ? "Yes" : "No"));
+                // Retrieve the document again to get the updated information
+                Document updatedDoc = getDocument(filename);
 
-                if (doc instanceof TextDocument) {
-                    TextDocument textDoc = (TextDocument) doc;
+                System.out.println("Filename: " + updatedDoc.getFilename());
+                System.out.println("Extension: " + updatedDoc.getExtension());
+                System.out.println("Changed: " + (updatedDoc.isChanged() ? "Yes" : "No"));
+
+                if (updatedDoc instanceof TextDocument) {
+                    TextDocument textDoc = (TextDocument) updatedDoc;
                     System.out.println("Line Count: " + textDoc.getLineCount());
                     System.out.println("Word Count: " + textDoc.getWordCount());
                     System.out.println("Character Count: " + textDoc.getCharCount());
-                } else if (doc instanceof ImageDocument) {
-                    ImageDocument imageDoc = (ImageDocument) doc;
+                } else if (updatedDoc instanceof ImageDocument) {
+                    ImageDocument imageDoc = (ImageDocument) updatedDoc;
                     System.out.println("Width: " + imageDoc.getWidth());
                     System.out.println("Height: " + imageDoc.getHeight());
-                } else if (doc instanceof JavaDocument) {
-                    JavaDocument javaDoc = (JavaDocument) doc;
+                } else if (updatedDoc instanceof JavaDocument) {
+                    JavaDocument javaDoc = (JavaDocument) updatedDoc;
                     System.out.println("Line Count: " + javaDoc.getLineCount());
                     System.out.println("Class Count: " + javaDoc.getClassCount());
                     System.out.println("Method Count: " + javaDoc.getMethodCount());
-                } else if (doc instanceof PythonDocument) {
-                    PythonDocument pythonDoc = (PythonDocument) doc;
+                } else if (updatedDoc instanceof PythonDocument) {
+                    PythonDocument pythonDoc = (PythonDocument) updatedDoc;
                     System.out.println("Line Count: " + pythonDoc.getLineCount());
                     System.out.println("Function Count: " + pythonDoc.getFunctionCount());
-                } else if (doc instanceof ProgramDocument) {
-                    ProgramDocument programDoc = (ProgramDocument) doc;
+                } else if (updatedDoc instanceof ProgramDocument) {
+                    ProgramDocument programDoc = (ProgramDocument) updatedDoc;
                     programDoc.getProgramInfo();
                 }
 
@@ -236,16 +239,31 @@ public class DocumentManager {
         System.out.println("Document not found.");
     }
 
+    private Document getDocument(String filename) {
+        for (Document doc : documents) {
+            if (doc.getFilename().equals(filename)) {
+                return doc;
+            }
+        }
+        return null;
+    }
+
     public void printStatus() {
         System.out.println("Created a snapshot at: " + snapshotTime);
         for (Document doc : documents) {
             System.out.print(doc.getFilename() + " - ");
-            if (doc.isChanged()) {
+            if (doc.isChanged() || hasFileChanged(doc)) {
                 System.out.println("Changed");
             } else {
                 System.out.println("No Change");
             }
         }
+    }
+
+    private boolean hasFileChanged(Document document) {
+        File file = new File("src/lab_two/my_local_folder", document.getFilename());
+        long lastModifiedTime = file.lastModified();
+        return lastModifiedTime > document.getLastCheckedTime();
     }
 
     public void commit() {

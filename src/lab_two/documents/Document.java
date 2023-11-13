@@ -7,6 +7,7 @@ public class Document {
     protected String extension;
     protected boolean changed;
     protected String changeDetails; // New field to store details of changes
+    private long lastCheckedTime;     // New field to store the last checked time
 
     // Constructor
     public Document(String filename, String extension) {
@@ -14,6 +15,7 @@ public class Document {
         this.extension = extension;
         this.changed = false;
         this.changeDetails = "";
+        this.lastCheckedTime = System.currentTimeMillis();
     }
 
     // Getter for filename
@@ -35,7 +37,6 @@ public class Document {
     public void markChanged(String details) {
         this.changed = true;
         this.changeDetails = details;
-        System.out.println("Document marked as changed: " + details);
     }
 
     // Overloaded method to mark the document as changed without details
@@ -43,14 +44,24 @@ public class Document {
         markChanged("No details provided");
     }
 
-    // Method to reset the changed flag
+    // Method to reset the changed status of the document
     public void resetChanged() {
         this.changed = false;
-        this.changeDetails = "";
+        this.changeDetails = null;
     }
 
     // Method to get details of changes
-    public String getChangeDetails() {
-        return changeDetails;
+//    public String getChangeDetails() {
+//        return changeDetails;
+//    }
+
+    // Method to update the last checked time
+    public void updateLastCheckedTime() {
+        this.lastCheckedTime = System.currentTimeMillis();
+    }
+
+    // Getter for last checked time
+    public long getLastCheckedTime() {
+        return lastCheckedTime;
     }
 }
