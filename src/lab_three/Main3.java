@@ -1,114 +1,75 @@
-// Main.java
+
 package lab_three;
 
-import java.util.Scanner;
+import lab_three.behaviour.TestQueue;
+import lab_three.behaviour.TestStack;
+import lab_three.models.Queue.ArrayUpQueue;
+import lab_three.models.Queue.LinkedListQueue;
+import lab_three.models.Stack.ArrayUpStack;
+import lab_three.models.Stack.LinkedListStack;
 
-import lab_three.models.Queue.Queue;
-import lab_three.models.Queue.Queue.ArrayQueue;
-import lab_three.models.Queue.Queue.CustomQueue;
-import lab_three.models.Queue.Queue.LinkedQueue;
-import lab_three.models.Stack.Stack;
-import lab_three.models.Stack.Stack.ArrayStack;
-import lab_three.models.Stack.Stack.CustomStack;
-import lab_three.models.Stack.Stack.LinkedStack;
+import java.util.Scanner;
 
 public class Main3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        String message = "";
 
-        // Test ArrayQueue
-        System.out.println("Testing ArrayQueue:");
-        ArrayQueue<Integer> arrayQueue = new ArrayQueue<>();
-        testQueue(arrayQueue, scanner);
+        while (!message.equals("q")) {
+            System.out.println("""
+                    Choose an option:
+                    1. Test Stack
+                    2. Test Queue
+                    q. Quit
+                    """);
+            System.out.print("> ");
+            message = scanner.nextLine();
 
-        // Test CustomQueue
-        System.out.println("\nTesting CustomQueue:");
-        CustomQueue<Integer> customQueue = new CustomQueue<>();
-        testQueue(customQueue, scanner);
+            switch (message) {
+                case "1" -> {
+                    System.out.println("""
+                            Choose a stack implementation:
+                            1. ArrayUpStack
+                            2. LinkedListStack
+                            q. Quit
+                            """);
+                    System.out.print("> ");
+                    String stackOption = scanner.nextLine();
 
-        // Test LinkedQueue
-        System.out.println("\nTesting LinkedQueue:");
-        LinkedQueue<Integer> linkedQueue = new LinkedQueue<>();
-        testQueue(linkedQueue, scanner);
+                    if (stackOption.equals("1")) {
+                        TestStack<Integer> arrayUpStackTest = new TestStack<>(new ArrayUpStack<>(5));
+                        arrayUpStackTest.run();
+                    } else if (stackOption.equals("2")) {
+                        TestStack<Integer> linkedListStackTest = new TestStack<>(new LinkedListStack<>(5));
+                        linkedListStackTest.run();
+                    } else if (!stackOption.equals("q")) {
+                        System.out.println("Invalid stack option.");
+                    }
+                }
+                case "2" -> {
+                    System.out.println("""
+                            Choose a queue implementation:
+                            1. ArrayUpQueue
+                            2. LinkedListQueue
+                            q. Quit
+                            """);
+                    System.out.print("> ");
+                    String queueOption = scanner.nextLine();
 
-        // Test ArrayStack
-        System.out.println("\nTesting ArrayStack:");
-        ArrayStack<Integer> arrayStack = new ArrayStack<>();
-        testStack(arrayStack, scanner);
-
-        // Test CustomStack
-        System.out.println("\nTesting CustomStack:");
-        CustomStack<Integer> customStack = new CustomStack<>();
-        testStack(customStack, scanner);
-
-        // Test LinkedStack
-        System.out.println("\nTesting LinkedStack:");
-        LinkedStack<Integer> linkedStack = new LinkedStack<>();
-        testStack(linkedStack, scanner);
-
-        // Close the scanner
+                    if (queueOption.equals("1")) {
+                        TestQueue<Integer> arrayUpQueueTest = new TestQueue<>(new ArrayUpQueue<>(5));
+                        arrayUpQueueTest.run();
+                    } else if (queueOption.equals("2")) {
+                        TestQueue<Integer> linkedListQueueTest = new TestQueue<>(new LinkedListQueue<>(5));
+                        linkedListQueueTest.run();
+                    } else if (!queueOption.equals("q")) {
+                        System.out.println("Invalid queue option.");
+                    }
+                }
+                case "q" -> System.out.println("Shutting down...");
+                default -> System.out.println("Invalid command.");
+            }
+        }
         scanner.close();
-    }
-
-    private static void testQueue(Queue<Integer> queue, Scanner scanner) {
-        try {
-            System.out.print("Enter numbers to enqueue (space-separated): ");
-            String[] input = scanner.nextLine().split("\\s+");
-            for (String num : input) {
-                queue.enqueue(Integer.parseInt(num));
-            }
-
-            System.out.println("Front element: " + queue.peek());
-            System.out.println("Dequeued element: " + queue.dequeue());
-            System.out.println("Dequeued element: " + queue.dequeue());
-
-            System.out.println("Is the queue empty? " + queue.isEmpty());
-
-            System.out.print("Enter more numbers to enqueue (space-separated): ");
-            input = scanner.nextLine().split("\\s+");
-            for (String num : input) {
-                queue.enqueue(Integer.parseInt(num));
-            }
-
-            System.out.println("Is the queue full? " + queue.isFull());
-
-            System.out.println("Remaining elements in the queue:");
-            while (!queue.isEmpty()) {
-                System.out.println(queue.dequeue());
-            }
-        } catch (IllegalStateException | NumberFormatException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
-
-    private static void testStack(Stack<Integer> stack, Scanner scanner) {
-        try {
-            System.out.print("Enter numbers to push onto the stack (space-separated): ");
-            String[] input = scanner.nextLine().split("\\s+");
-            for (String num : input) {
-                stack.push(Integer.parseInt(num));
-            }
-
-            System.out.println("Top element: " + stack.peek());
-            System.out.println("Popped element: " + stack.pop());
-            System.out.println("Popped element: " + stack.pop());
-
-            System.out.println("Is the stack empty? " + stack.isEmpty());
-
-            System.out.print("Enter more numbers to push onto the stack (space-separated): ");
-            input = scanner.nextLine().split("\\s+");
-            for (String num : input) {
-                stack.push(Integer.parseInt(num));
-            }
-
-            System.out.println("Is the stack full? " + stack.isFull());
-
-            System.out.println("Remaining elements in the stack:");
-            while (!stack.isEmpty()) {
-                System.out.println(stack.pop());
-            }
-        } catch (IllegalStateException | NumberFormatException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
     }
 }
