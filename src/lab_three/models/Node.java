@@ -1,11 +1,13 @@
-package lab_three.models.Stack;
+package lab_three.models;
 
 public class Node<T> {
-    T data;
-    Node<T> next;
+    public T data;
+    public Node<T> next;
 
     public Node(T data) {
         this.data = data;
         this.next = null;
     }
 }
+
+
