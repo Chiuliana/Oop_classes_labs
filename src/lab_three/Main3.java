@@ -1,10 +1,11 @@
-
 package lab_three;
 
 import lab_three.behaviour.TestQueue;
 import lab_three.behaviour.TestStack;
+import lab_three.models.Queue.ArrayDownQueue;
 import lab_three.models.Queue.ArrayUpQueue;
 import lab_three.models.Queue.LinkedListQueue;
+import lab_three.models.Stack.ArrayDownStack;
 import lab_three.models.Stack.ArrayUpStack;
 import lab_three.models.Stack.LinkedListStack;
 
@@ -17,12 +18,14 @@ public class Main3 {
 
         while (!message.equals("q")) {
             System.out.println("""
+                    .................
                     Choose an option:
                     ..................
                     Test Stack  --> 1
                     Test Queue --> 2
                     ..................
                     Quit --> q
+                    ..................
                     """);
             System.out.print("> ");
             message = scanner.nextLine();
@@ -30,12 +33,15 @@ public class Main3 {
             switch (message) {
                 case "1" -> {
                     System.out.println("""
+                            ..............................
                             Choose a stack implementation:
                             ...............................
-                            ArrayUpStack --> 2
-                            LinkedListStack --> 2
+                            ArrayUpStack --> 1
+                            ArrayDownStack --> 2
+                            LinkedListStack --> 3
                             ...............................
                             Quit --> q
+                            ...............................
                             """);
                     System.out.print("> ");
                     String stackOption = scanner.nextLine();
@@ -44,6 +50,9 @@ public class Main3 {
                         TestStack<Integer> arrayUpStackTest = new TestStack<>(new ArrayUpStack<>(5));
                         arrayUpStackTest.run();
                     } else if (stackOption.equals("2")) {
+                        TestStack<Integer> arrayDownStackTest = new TestStack<>(new ArrayDownStack<>(5));
+                        arrayDownStackTest.run();
+                    } else if (stackOption.equals("3")) {
                         TestStack<Integer> linkedListStackTest = new TestStack<>(new LinkedListStack<>(5));
                         linkedListStackTest.run();
                     } else if (!stackOption.equals("q")) {
@@ -52,12 +61,15 @@ public class Main3 {
                 }
                 case "2" -> {
                     System.out.println("""
+                            ...............................
                             Choose a queue implementation:
                             ...............................
                             ArrayUpQueue --> 1
-                            LinkedListQueue --> 2
+                            ArrayDownQueue --> 2
+                            LinkedListQueue --> 3
                             ...............................
                             Quit --> q
+                            ...............................
                             """);
                     System.out.print("> ");
                     String queueOption = scanner.nextLine();
@@ -66,6 +78,9 @@ public class Main3 {
                         TestQueue<Integer> arrayUpQueueTest = new TestQueue<>(new ArrayUpQueue<>(5));
                         arrayUpQueueTest.run();
                     } else if (queueOption.equals("2")) {
+                        TestQueue<Integer> arrayDownQueueTest = new TestQueue<>(new ArrayDownQueue<>(5));
+                        arrayDownQueueTest.run();
+                    } else if (queueOption.equals("3")) {
                         TestQueue<Integer> linkedListQueueTest = new TestQueue<>(new LinkedListQueue<>(5));
                         linkedListQueueTest.run();
                     } else if (!queueOption.equals("q")) {

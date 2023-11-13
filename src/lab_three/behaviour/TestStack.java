@@ -15,19 +15,21 @@ public class TestStack<T> {
 
     public void run() {
         String message = "";
-        System.out.println("Stack Test.");
-        System.out.println("...............\n" + "For help enter 'h'" + "...............\n");
+        System.out.println("...............\n" + "Stack Test.");
+        System.out.println("...............\n" + "For help enter h \n" + "...............\n");
         while (!message.equals("q")) {
             System.out.print("> ");
             String[] input = scanner.nextLine().split(" ");
             message = input[0];
             switch (message) {
                 case "h" -> System.out.println("""
+                        ....................................
                         push val to stack --> push <value> 
                         pop val from stack --> pop
                         peek val from stack --> peek
                         .....................................
                         quit --> q
+                        .....................................
                         """);
                 case "push" -> {
                     if (input.length < 2) {

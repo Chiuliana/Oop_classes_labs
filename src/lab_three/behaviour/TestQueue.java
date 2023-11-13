@@ -15,19 +15,21 @@ public class TestQueue<T> {
 
     public void run() {
         String message = "";
-        System.out.println("Queue Test.");
-        System.out.println("...............\n" + "For help enter 'h'" + "...............\n");
+        System.out.println("...............\n" + "Queue Test.");
+        System.out.println("...............\n" + "For help enter h \n" + "...............\n");
         while (!message.equals("q")) {
             System.out.print("> ");
             String[] input = scanner.nextLine().split(" ");
             message = input[0];
             switch (message) {
                 case "h" -> System.out.println("""
-                        enqueue val to queue --> enqueue <value> 
-                        dequeue val from queue --> dequeue 
+                        .........................................
+                        enqueue val to queue --> enq <value> 
+                        dequeue val from queue --> deq 
                         peek val from queue --> peek
                         ..........................................
                         quit --> q
+                        ..........................................
                         """);
                 case "enqueue" -> {
                     if (input.length < 2) {

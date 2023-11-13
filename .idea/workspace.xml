@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files" />
+    <list default="true" id="ab860d84-ac82-4659-9648-2832b20238a8" name="Changes" comment="commit files">
+      <change beforePath="$PROJECT_DIR$/src/lab_three/Main3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_three/Main3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_three/behaviour/TestQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_three/behaviour/TestQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lab_three/behaviour/TestStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lab_three/behaviour/TestStack.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
